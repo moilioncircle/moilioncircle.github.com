@@ -1,0 +1,31 @@
+#jekyll serve
+
+# Site wide configuration
+
+title: 攻城狮朋友圈，一起做美好的事！
+description: 不等不靠，有囧有料，攻城狮建造世界
+logo: logo/120x120-moilion.png
+teaser: logo/400x250-skill.png
+#url: http://www.moilioncircle.com/
+
+# Jekyll configuration
+
+sass:
+    sass_dir: _sass
+    style: compressed
+permalink: /:categories/:title.html
+markdown: kramdown
+highlighter: pygments
+gems:
+  - jekyll-sitemap
+
+
+# Site owner
+owner:
+  name: "史荣久"
+  web: http://www.trydofor.com
+  bio: "$implicity is everything, since valentine's day 2004."
+  avatar: user/shi.rongjiu.jpg
+
+
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]

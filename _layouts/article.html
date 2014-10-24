@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div id="main" role="main">			
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+
+        <nav class="breadcrumbs">
+          <span class="divider">/</span>
+          <a href="{{ site.url }}/{{ page.category }}/">{{ page.category | capitalize }}</a> 
+          <span class="divider">/</span> {{ page.title }}
+        </nav><!-- /.breadcrumbs -->
+
+		<div class="inner-wrap">
+			<nav class="toc"></nav><!-- /.toc -->
+			<div id="content" class="page-content" itemprop="articleBody">
+				{{ content }}
+                <br />
+                {% if page.teaser %}<div><img src="{{ site.url }}/images/{{ page.teaser }}" alt="teaser" itemprop="image"></div><br />{% endif %}
+                <div>
+                <a href="javascript:scroll(0,0)"  class="btn">回顶</a>
+                {% if page.previous %}
+                <a href="{{ site.url }}{{ page.previous.url }}" class="btn-inverse">{{page.previous.title}}</a>
+                {% endif %}
+                {% if page.next %}
+                <a href="{{ site.url }}{{ page.next.url }}" class="btn-inverse">{{page.next.title}}</a>
+                {% endif %}
+                </div>
+				<hr />
+				<footer class="page-footer">
+					{% if page.categories %}{% include page-author.html %}{% endif %}
+					{% if page.share != false %}{% include share-this.html %}{% endif %}
+					{% include page-meta.html %}
+				</footer><!-- /.footer -->
+				<aside>
+					{% if page.comments == true %}{% include comments.html %}{% endif %}
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		{% if page.ads == true %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
