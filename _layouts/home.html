@@ -43,12 +43,25 @@
       <script src="{{ site.url }}/js/vendor/respond.min.js"></script>
     <![endif]-->
 
+    <!-- http://tongji.baidu.com start-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?ce96189634296b7eb0b22a43e76d0ef8";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <!-- http://tongji.baidu.com end-->
+
   </head>
 
   <body>
     {% include header.html %}
     {% include navigation-sliding.html %}
-
+    {% include browser-upgrade.html %}
+      
     {% if page.image.feature %}
         <div class="page-lead" style="background-image:url({{ site.url }}/images/{{ page.image.feature }})">
           <div class="wrap page-lead-content">
