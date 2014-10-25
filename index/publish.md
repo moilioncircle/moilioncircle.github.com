@@ -1,7 +1,6 @@
 ---
 layout: archive
 categories: index
-title: 爬步历史
 excerpt: 爬步历史（publish），努力地记录每次爬步。
 permalink: /publish/index.html
 ---
