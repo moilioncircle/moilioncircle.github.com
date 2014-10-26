@@ -10,12 +10,27 @@ image:
 
 <div class="tiles">
 
-{% for post in site.posts limit:4 %}
-    <div class="tile">
-      <h2 class="post-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}">► {{ post.title }}</a></h2>
-      <p class="post-excerpt" itemprop="description">{{ post.excerpt | strip_html | truncate: 100 }}</p>
-    </div><!-- /.tile -->
+{% assign counter = 1 %}
+{% assign limiter = 8 %}
+{% assign starlmt = limiter | divided_by:2 %}
+{% assign startag = 'star' %}
+
+{% for post in site.tags[startag] %}
+    {% if counter > starlmt %} {% break %} {% endif %}
+    {% assign counter = counter | plus:1 %} 
+    {% include post-arrow.html %}
 {% endfor %}
+
+{% if counter <= limiter %}
+    {% assign categories = 'publish,release,warroom' %}
+    {% for post in site.posts %}
+        {% if counter > limiter %} {% break %} {% endif %}
+        {% if post.tags contains startag %} {% continue %} {% endif %}
+        {% unless categories contains post.category %} {% continue %} {% endunless %}
+        {% assign counter = counter | plus:1 %} 
+        {% include post-arrow.html %}
+    {% endfor %}
+{% endif %}
 
 </div><!-- /.tiles -->
 
