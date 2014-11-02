@@ -13,7 +13,7 @@ image:
 {% assign counter = 1 %}
 {% assign limiter = 8 %}
 {% assign starlmt = limiter | divided_by:2 %}
-{% assign startag = 'star' %}
+{% assign startag = '$' %}
 
 {% for post in site.tags[startag] %}
     {% if counter > starlmt %} {% break %} {% endif %}
