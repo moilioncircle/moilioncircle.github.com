@@ -1,0 +1,196 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type='text/css'>
+    input{width:60px;}
+    body{background-color:#A9A9FF;}
+</style>
+
+<input type="text" value="背景色" disabled />
+<input id="BG" type="text" value="#FFCC00" />
+<input type="text" value="前景色" disabled />
+<input id="FG" type="text" value="#000000" />
+<input type="text" value="边框色" disabled />
+<input id="BD" type="text" value="#FFFFFF" />
+<br/>
+<input type="text" value="倍数*22" disabled />
+<input id="TM" type="text" value="10" />
+<input type="text" value="边框:px" disabled />
+<input id="BS" type="text" value="0" />
+<input type="text" value="尺寸:px" disabled />
+<input id="PX" type="text" value="220" disabled />
+<br/>
+<input type="text" value="偏移X" disabled />
+<input id="OX" type="text" value="100" />
+<input type="text" value="偏移Y" disabled />
+<input id="OY" type="text" value="10" />
+<br/>
+<input type="button" style="background-color:#4169E1" onclick="refreshLogo()" value="生成" />
+<input type="button" style="background-color:#9ACD32" onclick="window.open('http://www.moilion.com')" value="攻城狮" />
+<input type="button" style="background-color:#9ACD32" onclick="window.open('http://i.youku.com/moilioncircle')" value="@优酷" />
+<input type="button" style="background-color:#9ACD32" onclick="window.open('http://weibo.com/moilioncircle')" value="@微博" />
+<input type="button" style="background-color:#9ACD32" onclick="window.open('https://github.com/moilion')" value="源码" />
+<input type="button" style="background-color:#9ACD32" onclick="window.open('mailto:circle@moilion.com')" value="邮件" />
+<br/>
+<textarea id="HTML" rows="8" cols="53" readonly></textarea>
+<br/>
+
+<script>
+var bg,fg,bs,bd,tm,ox,oy;
+var dv ={"BBOX":["EYE_L","EYE_R","NOS_R","NOS_B","MOU_T","MOU_B",
+                "LM_1","LM_2","LO_1","LO_2","LI_1","LI_2","LL_1",
+                "LL_2","RI_1","RI_2","RO_1","RO_2","LN_1"]};
+
+function refreshLogo(){
+    refreshPara();
+    var map = mapDivStyle();
+    for(var k in map){
+        setDivStyle(k,map[k]);
+    }
+}
+
+function refreshPara(){
+    bg = getInputValue("BG","#FFCC00");
+    fg = getInputValue("FG","#000000");
+    tm = getInputValue("TM","10");
+    bs = getInputValue("BS","0");
+    bd = getInputValue("BD","#FFFFFF");
+    ox = getInputValue("OX","100");
+    oy = getInputValue("OY","10");
+
+    setInputValue("PX",(tm * 22 + bs * 2));
+    var map = mapDivStyle()
+    var htm = getDivHtml(dv,map,false);
+    setInputValue("HTML",htm);
+}
+
+function mapDivStyle(){
+    /*
+    □□□□□□□□□□□□□□□□□□□□□□  
+    □□□□□□□□□□□□□□□□□□□□□□  
+    □□■■■■■□□□□□□□□■■■■■□□  
+    □□■■■■■□□□□□□□□■■■■■□□  
+    □□□□□□□□□□□□□□□■□□□□□□  
+    □□□□□□□□□□□□□□□■□□□□□□  
+    □□□□□□□□□□□□□□□■□□□□□□  
+    □□□□□□□□□□□□□□□■□□□□□□  
+    □□□□□□□□□□□□□□□■□□□□□□  
+    □□□□□□□□□□□□□□□■□□□□□□  
+    □□□□□□□■■■■■■■■■□□□□□□  
+    □□□□□□□■■■■■■■■■□□□□□□  
+    □□□□□□□□□□□■□□□□□□□□□□  
+    □□□□□□□□□□□■□□□□□□□□□□  
+    □□□□□□□□□■■■■■□□□□□□□□  
+    □□□□□□□□□■■■■■□□□□□□□□  
+    □□□□□□□□□□□□□□□□□□□□□□  
+    □□□□□□□□□□□□□□□□□□□□□□  
+    □□□□□□□□□□□□□□□□□□□□□□  
+    □□□□■□□□□□■□■□□□□□■□□□  
+    ■□■□■□■□■■■□■■■□■□■□■□  
+    ■□■□■□□□■□■□■□■□□□■□■□  
+    */
+    
+    // coordinate: 22:22, 82
+    /*
+    03,04:03-07,16-20
+    05-10:16
+    11,12:08-16
+    13,14:12
+    15,16:10-14
+    20:05,11,13,19
+    21:01,03,05,07,09-11,13-15,17,19,21
+    22:01,03,05,09,11,13,15,19,21
+    */
+    
+    
+    return {
+    "BBOX" :getDivStyle(   ox,   oy,22*tm,22*tm,2,bg,false,bs,bd), // 背景
+    "EYE_L":getDivStyle( 2*tm, 2*tm, 5*tm, 2*tm,3,fg,true), // 左眼
+    "EYE_R":getDivStyle(15*tm, 2*tm, 5*tm, 2*tm,3,fg,true), // 右眼
+    "NOS_R":getDivStyle(15*tm, 4*tm, 1*tm, 6*tm,3,fg,true), // 鼻梁
+    "NOS_B":getDivStyle( 7*tm,10*tm, 9*tm, 2*tm,3,fg,true), // 鼻子
+    "MOU_T":getDivStyle(11*tm,12*tm, 1*tm, 2*tm,3,fg,true), // 人中
+    "MOU_B":getDivStyle( 9*tm,14*tm, 5*tm, 2*tm,3,fg,true), // 嘴巴
+    "LM_1" :getDivStyle( 0*tm,20*tm, 1*tm, 2*tm,3,fg,true), // M1
+    "LM_2" :getDivStyle( 2*tm,20*tm, 1*tm, 2*tm,3,fg,true), // M2
+    "LO_1" :getDivStyle( 4*tm,19*tm, 1*tm, 3*tm,3,fg,true), // O1
+    "LO_2" :getDivStyle( 6*tm,20*tm, 1*tm, 1*tm,3,fg,true), // O2
+    "LI_1" :getDivStyle( 8*tm,20*tm, 1*tm, 2*tm,3,fg,true), // I1
+    "LI_2" :getDivStyle( 9*tm,20*tm, 1*tm, 1*tm,3,fg,true), // I2
+    "LL_1" :getDivStyle(10*tm,19*tm, 1*tm, 3*tm,3,fg,true), // L1
+    "LL_2" :getDivStyle(12*tm,19*tm, 1*tm, 3*tm,3,fg,true), // L2
+    "RI_1" :getDivStyle(13*tm,20*tm, 1*tm, 1*tm,3,fg,true), // I1
+    "RI_2" :getDivStyle(14*tm,20*tm, 1*tm, 2*tm,3,fg,true), // I2
+    "RO_1" :getDivStyle(16*tm,20*tm, 1*tm, 1*tm,3,fg,true), // O1
+    "RO_2" :getDivStyle(18*tm,19*tm, 1*tm, 3*tm,3,fg,true), // O2
+    "LN_1" :getDivStyle(20*tm,20*tm, 1*tm, 2*tm,3,fg,true) // N1
+    };
+}
+
+function getDivStyle(x,y,w,h,z,b,p,bs,bd){
+
+    var style = "overflow:hidden;";
+    style += "left:"+x+"px;";
+    style += "top:"+y+"px;";
+    style += "width:"+w+"px;";
+    style += "height:"+h+"px;";
+    style += "z-index:"+z+";";
+    style += "background-color:"+b+";";
+    style += "position:"+(p?"absolute":"relative")+";";
+    if(bs == null){
+        style += "border:0px;";
+    }else{
+        style += "border:"+bs+"px solid "+bd+";";
+    }
+
+    return style;
+}
+
+
+function setDivStyle(id,style){
+    var divObj = document.getElementById(id);
+    if(divObj != null){
+        divObj.setAttribute('style',style);
+    }
+}
+
+function getInputValue(id,val){
+    var obj = document.getElementById(id);
+    if(obj == null) return val;
+    return obj.value;
+}
+
+function setInputValue(id,val){
+    var obj = document.getElementById(id);
+    if(obj == null) return;
+    obj.value=val;
+}
+
+function getDivHtml(div,css,idf){
+    var html = "";
+    for(var d in div){
+        if(idf){
+            html += "<div id='"+d+"' style='"+css[d]+"'>";
+        }else{
+            html += "<div style='"+css[d]+"'>";
+        }
+        if(div[d] instanceof Array){
+            var v = div[d];
+            for(var i in v){
+                if(idf){
+                    html += "<div id='"+v[i]+"' style='"+css[v[i]]+"'></div>";
+                }else{
+                    html += "<div style='"+css[v[i]]+"'></div>";
+                }
+            }
+        }
+        html += "</div>";
+    }
+    return html;
+}
+
+//-------------------
+refreshPara();
+var map = mapDivStyle();
+var htm = getDivHtml(dv,map,true);
+document.write(htm);
+
+</script>

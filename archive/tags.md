@@ -3,7 +3,7 @@ layout: archive
 categories: index
 title: 
 excerpt: 
-permalink: /tags/index.html
+permalink: /archive/tags.html
 ---
 
 <div class="tiles">
