@@ -7,8 +7,9 @@ layout: default
 
         <div>
         {% if page.category %}
-          <a href="{{ site.url }}/{{ page.category }}/" class="btn-info">{{ site.data.category[page.category]}} ◄</a> 
+          <a href="{{ site.url }}/{{ page.category }}/" class="btn-info">{{ site.data.category[page.category]}}▼</a> 
         {% endif %}
+        <a href="{{ site.url }}/archive/year.html#{{page.date | date: '%Y'}}" class="btn-info">{{page.date | date: '%Y'}}▼</a> 
         {% if page.tags %}
         {% for tag in page.tags %} 
           <a href="{{ site.url }}/archive/tags.html#{{ tag }}" class="btn-success">{{ tag }}</a> 
