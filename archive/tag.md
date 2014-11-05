@@ -1,7 +1,7 @@
 ---
 layout: archive
 category: archive
-permalink: /archive/tags.html
+permalink: /archive/tag.html
 ---
 
 <div class="tiles">

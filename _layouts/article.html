@@ -11,7 +11,7 @@ layout: default
         <a href="{{ site.url }}/archive/year.html#{{page.date | date: '%Y'}}" class="btn-info">{{page.date | date: '%Y'}}▼</a> 
         {% if page.tags %}
         {% for tag in page.tags %} 
-          <a href="{{ site.url }}/archive/tags.html#{{ tag }}" class="btn-success">{{ tag }}</a> 
+          <a href="{{ site.url }}/archive/tag.html#{{ tag }}" class="btn-success">{{ tag }}</a> 
         {% endfor %}
         {% endif %}
         </div>
