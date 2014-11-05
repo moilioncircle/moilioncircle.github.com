@@ -1,11 +1,10 @@
 ---
 layout: home
-categories: index
+category: archive
 permalink: /index.html
 title: 不等不靠，有囧有料
 excerpt: millions of lions moil to build the world
-image:
-  feature: bg/1200x600-road-bluesky.jpg
+feature: bg/1200x600-road-bluesky.jpg
 ---
 
 <div class="tiles">

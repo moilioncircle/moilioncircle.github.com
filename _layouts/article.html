@@ -4,7 +4,6 @@ layout: default
 
 <div id="main" role="main">			
 	<article class="wrap" itemscope itemtype="http://schema.org/Article">
-
         <div>
         {% if page.category %}
           <a href="{{ site.url }}/{{ page.category }}/" class="btn-info">{{ site.data.category[page.category]}}▼</a> 
@@ -36,7 +35,6 @@ layout: default
                         {% if previdex > cindx %}{% assign previdex = 0 %}{% endif %}
                         {% assign prevpost = cates[previdex] %}
                         <a href="{{ site.url }}{{ prevpost.url }}" class="btn-inverse">◄ {{prevpost.title}}</a>
-
                         {% assign nextidex = i|minus:1 %}
                         {% if nextidex < 0 %}{% assign previdex = cindx %}{% endif %}
                         {% assign nextpost = cates[nextidex] %}

@@ -1,6 +1,6 @@
 ---
 layout: archive
-categories: index
+category: archive
 excerpt: 锐力易思（release），锐力地促进思想进化。
 permalink: /release/index.html
 ---

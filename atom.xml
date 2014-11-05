@@ -34,7 +34,7 @@ limit: 25
 					{% if site.owner.email %}<email>{{ site.owner.email }}</email>{% endif %}
 				</author>
         <content type="html">
-        	{% if post.image.feature %}&lt;img src=&quot;{{ site.url }}/images/{{ post.image.feature }}&quot;&gt;&lt;br/&gt;{% endif %}
+        	{% if post.feature %}&lt;img src=&quot;{{ site.url }}/images/{{ post.feature }}&quot;&gt;&lt;br/&gt;{% endif %}
         	{{ post.content | xml_escape }}
         </content>
     </entry>

@@ -1,31 +1,13 @@
 # Footer navigation links
 
-- title: "源码"
+- title: 联系狮群
+  url: /archive/contact.html 
+
+- title: 项目源码
   url: http://github.com/moilioncircle 
-  excerpt: 
-  image: 
 
-- title: "优酷"
-  url: http://i.youku.com/moilioncircle
-  excerpt: 
-  image: 
+- title: 狮友创业
+  url: /founder/
 
-- title: "网盘"
-  url: http://pan.baidu.com/share/home?uk=1380913564
-  excerpt: 
-  image: 
-  
-- title: "微博"
-  url: http://weibo.com/moilioncircle
-  excerpt: 
-  image: 
-
-- title: "微信"
-  url: http://mp.weixin.qq.com/s?__biz=MzA5NTY3MjQzOQ==&mid=201629995&idx=1&sn=7f934b06ec3c9f70a8f2fd00592102ea#rd
-  excerpt: 
-  image: 
-
-- title: "贴吧"
-  url: http://tieba.baidu.com/f?kw=%E6%94%BB%E5%9F%8E%E7%8B%AE%E6%9C%8B%E5%8F%8B%E5%9C%88
-  excerpt: 
-  image: 
+- title: 爱可深思
+  url: /actions/

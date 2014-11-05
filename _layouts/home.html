@@ -62,8 +62,8 @@
     {% include navigation-sliding.html %}
     {% include browser-upgrade.html %}
       
-    {% if page.image.feature %}
-        <div class="page-lead" style="background-image:url({{ site.url }}/images/{{ page.image.feature }})">
+    {% if page.feature %}
+        <div class="page-lead" style="background-image:url({{ site.url }}/images/{{ page.feature }})">
           <div class="wrap page-lead-content">
             <h1>{{ page.title }}</h1>
             {% if page.excerpt %}<h2>{{ page.excerpt }}</h2>{% endif %}

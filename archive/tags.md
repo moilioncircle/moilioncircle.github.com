@@ -1,8 +1,6 @@
 ---
 layout: archive
-categories: index
-title: 
-excerpt: 
+category: archive
 permalink: /archive/tags.html
 ---
 

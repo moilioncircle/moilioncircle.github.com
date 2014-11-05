@@ -1,7 +1,7 @@
 ---
 layout: archive
-categories: index
-excerpt: 创业狮友（founder），人是逼出来的，万物生长靠日。
+category: archive
+excerpt: 狮友创业（founder），莫等闲、白了少年头，空悲切。
 permalink: /founder/index.html
 ---
 

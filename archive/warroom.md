@@ -1,6 +1,6 @@
 ---
 layout: archive
-categories: index
+category: archive
 excerpt: 瓦奧如沐（warroom），不等不靠，有囧有料。
 permalink: /warroom/index.html
 ---
