@@ -6,6 +6,11 @@ permalink: /archive/tag.html
 
 <div class="tiles">
     <div>
+    <a href="/archive/category.html" class="btn-inverse">类别◄</a>
+    <a href="/archive/year.html" class="btn-inverse">年份◄</a>
+    <span class="btn">标签▼</span>
+    </div>
+    <div>
     {% for tag in site.tags %} 
         {% if tag[1].size > 1 %}
             <a href="#{{ tag[0] }}" class="btn-success"> {{ tag[0] }}▼{{ tag[1].size }}</a> 

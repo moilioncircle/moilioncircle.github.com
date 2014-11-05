@@ -7,6 +7,11 @@ permalink: /archive/year.html
 <div class="tiles">
 
     <div>
+    <a href="/archive/category.html" class="btn-inverse">类别◄</a>
+    <span class="btn">年份▼</span>
+    <a href="/archive/tag.html" class="btn-inverse">标签◄</a>
+    </div>
+    <div>
     {% assign counter = 0 %}
     {% assign yearcnt = 0 %}
     {% assign maxsize = site.posts | size%}
