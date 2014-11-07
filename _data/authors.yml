@@ -1,8 +1,20 @@
 # Authors
 
 shi.rongjiu:
-  name: "史荣久"
+  name: 史荣久
   web: http://www.trydofor.com
-  bio: "$implicity is everything, since valentine's day 2004."
+  bio: 十年摸爬滚打做了一信贷项目，略懂开发，运营和管理，祛你魅的大狮。
   avatar: user/shi.rongjiu.jpg
+  role: 创始人
+  city: 大连
+  join: 2014-05-14
+
+wang.shaochuan:
+  name: 王少川
+  web: http://www.zhefengle.com
+  bio: 淘宝无线专家，专注高并发，分布式及无线长连接、消息推送解决方案。
+  avatar: user/wang.shaochuan.jpg
+  role: 贡献者
+  city: 杭州
+  join: 2014-11-07
 

@@ -5,42 +5,38 @@ permalink: /archive/year.html
 ---
 
 <div class="tiles">
-
     <div>
-    <a href="/archive/category.html" class="btn-inverse">类别◄</a>
-    <span class="btn">年份▼</span>
-    <a href="/archive/tag.html" class="btn-inverse">标签◄</a>
-    </div>
-    <div>
-    {% assign counter = 0 %}
     {% assign yearcnt = 0 %}
     {% assign maxsize = site.posts | size%}
     {% for post in site.posts %} 
-        {% assign counter = counter | plus:1 %} 
         {% assign yearcnt = yearcnt | plus:1 %} 
         {% assign year = post.date | date: '%Y' %}
-        {% if counter < maxsize %}
-            {% assign npost = site.posts[counter] %}
+        {% if forloop.index < forloop.length %}
+            {% assign npost = site.posts[forloop.index] %}
             {% assign nyear = npost.date | date: '%Y' %}
         {% endif %}
-        {% if nyear != year) or counter >= maxsize %}
+        {% if nyear != year) or forloop.last %}
             <a href="#{{ year }}" class="btn-info"> {{ year }}▼{{ yearcnt }}</a>
             {% assign yearcnt = 0 %} 
         {% endif %}
     {% endfor %}
     </div>
-    
-    {% assign indexer = -1 %}
+    <div>
+        <a href="/archive/category.html" class="btn-inverse">类别◄</a>
+        <span class="btn">年份▲</span>
+        <a href="/archive/tag.html" class="btn-inverse">标签◄</a>
+        <a href="/archive/author.html" class="btn-inverse">作者◄</a>
+    </div>    
     {% assign pyear = "" %}
-    {% assign maxindx = site.posts | size | minus:1%}
     {% for post in site.posts %} 
         {% assign year = post.date | date: '%Y' %}
-        {% if indexer > -1 %}
-            {% assign ppost = site.posts[indexer] %}
+        {% unless forloop.first %}
+            {% assign pindx = forloop.index0|minus:1 %}
+            {% assign ppost = site.posts[pindx] %}
             {% assign pyear = ppost.date | date: '%Y' %}
-        {% endif %}
+        {% endunless %}
         {% if pyear != year %}
-            {% if indexer > -1 %}</ol>{% endif %}
+            {% unless forloop.first %}</ol>{% endunless %}
             <div>
                 <a name="{{ year }}" class="btn-info">{{ year }}</a>
                 <a href="javascript:scroll(0,0)"  class="btn-inverse">回顶 ▲</a>
@@ -49,8 +45,7 @@ permalink: /archive/year.html
             <ol>
         {% endif %}
         {% include post-list.html %}
-        {% if indexer ==  maxindx %}</ol>{% endif %}
-        {% assign indexer = indexer | plus:1 %} 
+        {% if forloop.last %}</ol>{% endif %}
     {% endfor %}
 </div>
 

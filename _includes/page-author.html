@@ -3,9 +3,10 @@
 {% endif %}
 
 <div class="author-image">
-	<img src="{{ site.url }}/images/{{ author.avatar }}" alt="{{ author.name }}">
+	<a href="/archive/author.html#{{page.author}}"><img src="{{ site.url }}/images/{{ author.avatar }}" alt="{{ author.name }}"></a>
 </div><!-- ./author-image -->
 <div class="author-content">
-	<h3 class="author-name" >Written by {% if author.web %}<a href="{{ author.web }}" itemprop="author">{{ author.name }}</a>{% else %}<span itemprop="author">{{ author.name }}</span>{% endif %}</h3>
-	<p class="author-bio">{{ author.bio }}</p>
+	<h3 class="author-name" ><a href="/archive/author.html#{{page.author}}"> {{ author.name }}</a></h3>
+    {% if author.web %}<div><a href="{{author.web}}" target="blank">{{author.web}}</a></div>{% endif %}
+	<div class="author-bio">{{ author.bio }}</div>
 </div><!-- ./author-content -->
