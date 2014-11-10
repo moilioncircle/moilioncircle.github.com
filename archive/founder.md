@@ -1,7 +1,7 @@
 ---
 layout: archive
 category: archive
-excerpt: 创业狮友（founder），莫等闲、白了少年头，空悲切。
+excerpt: 贩恩德儿（founder），莫等闲、白了少年头，空悲切。
 permalink: /founder/index.html
 ---
 
