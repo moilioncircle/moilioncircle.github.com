@@ -24,7 +24,7 @@ permalink: /archive/category.html
         <a href="javascript:scroll(0,0)"  class="btn-inverse">回顶 ▲</a>
         <a href="javascript:history.back()"  class="btn-inverse">返回 ◄</a>
     </div>
-    <ol>
+    <ol class="archive-list" reversed>
         {% for post in cate[1] %} 
             {% include post-list.html %}
         {% endfor %}

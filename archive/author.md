@@ -44,7 +44,7 @@ permalink: /archive/author.html
                 <div class="author-bio">{{ uinfo.bio }}</div>
             </div>
             </footer>
-            <ol>
+            <ol class="archive-list" reversed>
                 {% for post in upost %} 
                     {% include post-list.html %}
                 {% endfor %}

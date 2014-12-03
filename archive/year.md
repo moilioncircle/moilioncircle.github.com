@@ -42,7 +42,7 @@ permalink: /archive/year.html
                 <a href="javascript:scroll(0,0)"  class="btn-inverse">回顶 ▲</a>
                 <a href="javascript:history.back()"  class="btn-inverse">返回 ◄</a>
             </div>
-            <ol>
+            <ol class="archive-list" reversed>
         {% endif %}
         {% include post-list.html %}
         {% if forloop.last %}</ol>{% endif %}
