@@ -18,7 +18,7 @@ layout: default
 			<nav class="toc"></nav><!-- /.toc -->
 			<div id="content" class="page-content" itemprop="articleBody">
                 {% if page.teaser %}
-                <div><img src="{{ site.url }}/images/{{ page.teaser }}" alt="teaser" itemprop="image"></div><br />
+                <div><img id="teaserinfo" src="{{ site.url }}/images/{{ page.teaser }}" alt="《{{page.title}}》 {{page.excerpt}}"  itemprop="image"></div><br />
                 {% endif %}
 				{{ content }}
                 <br />
@@ -42,7 +42,7 @@ layout: default
 				<hr />
 				<footer class="page-footer">
 					{% if page.categories %}{% include page-author.html %}{% endif %}
-					{% if page.share != false %}{% include share-this.html %}{% endif %}
+					{% include share-this-baidu.html %}
 					{% include page-meta.html %}
 				</footer><!-- /.footer -->
 				<aside>
