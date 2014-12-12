@@ -21,7 +21,7 @@ feature: bg/1200x600-road-bluesky.jpg
 {% endfor %}
 
 {% if counter <= limiter %}
-    {% assign categories = 'publish,release,warroom,actions' %}
+    {% assign categories = 'publish,release,manshow,actions' %}
     {% for post in site.posts %}
         {% if counter > limiter %} {% break %} {% endif %}
         {% if post.tags contains startag %} {% continue %} {% endif %}
