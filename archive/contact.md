@@ -4,11 +4,16 @@ category: archive
 excerpt: 扛抬可他（contact），有事钟无艳，无事夏迎春。
 permalink: /archive/contact.html
 ---
+#攻城狮朋友圈 moilioncircle
 
-  * [项目源码：狮友圈及项目源码](http://github.com/moilioncircle)
-  * [优酷视频：主要的视频发布平台](http://i.youku.com/moilioncircle)
-  * [百度网盘：辅助的视频备份平台](http://pan.baidu.com/share/home?uk=1380913564)
-  * [新浪微博：狮友互动平台](http://weibo.com/moilioncircle)
-  * [微信订阅：消息发布平台](http://mp.weixin.qq.com/s?__biz=MzA5NTY3MjQzOQ==&mid=201629995&idx=1&sn=7f934b06ec3c9f70a8f2fd00592102ea#rd)
-  * [百度贴吧：次要占坑](http://tieba.baidu.com/f?kw=%E6%94%BB%E5%9F%8E%E7%8B%AE%E6%9C%8B%E5%8F%8B%E5%9C%88)
+<ul class="th-grid">
+  <li><a href="http://github.com/moilioncircle"><img src="../images/logo/300x300-github.png"></a>官网及源码</li>
+  <li><a href="http://i.youku.com/moilioncircle"><img src="../images/logo/300x300-youku.png"></a>视频发布（主）</li>
+  <li><a href="http://mp.weixin.qq.com/s?__biz=MzA5NTY3MjQzOQ==&mid=202703894&idx=1&sn=0b1f5f21897dad285be91cfdf8e0e525"><img src="../images/logo/300x300-weixin.png"></a>消息发布（主）</li>
+</ul>
 
+<ul class="th-grid">
+  <li><a href="http://pan.baidu.com/share/home?uk=1380913564"><img src="../images/logo/300x300-baiduyun.png"></a>视频发布（从）</li>
+  <li><a href="http://weibo.com/moilioncircle"><img src="../images/logo/300x300-sinaweibo.png"></a>狮友互动（主）</li>
+  <li><a href="http://t.qq.com/moilioncircle"><img src="../images/logo/300x300-tengxunweibo.png"></a>狮友互动（从）</li>
+</ul>
