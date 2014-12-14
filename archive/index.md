@@ -17,7 +17,7 @@ feature: bg/1200x600-road-bluesky.jpg
 {% for post in site.tags[startag] %}
     {% if counter > starlmt %} {% break %} {% endif %}
     {% assign counter = counter | plus:1 %} 
-    {% include post-arrow.html %}
+{% include post-arrow.html %}
 {% endfor %}
 
 {% if counter <= limiter %}
@@ -27,10 +27,10 @@ feature: bg/1200x600-road-bluesky.jpg
         {% if post.tags contains startag %} {% continue %} {% endif %}
         {% unless categories contains post.category %} {% continue %} {% endunless %}
         {% assign counter = counter | plus:1 %} 
-        {% include post-arrow.html %}
+{% include post-arrow.html %}
     {% endfor %}
 {% endif %}
 
-</div><!-- /.tiles -->
+</div>
 
 

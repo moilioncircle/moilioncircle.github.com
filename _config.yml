@@ -6,6 +6,8 @@ title: 攻城狮朋友圈：终日乾乾，或跃在渊
 description: 不等不靠，有囧有料，攻城狮建造世界
 logo: logo/120x120-moilion.png
 teaser: logo/400x250-skill.png
+#url: http://127.0.0.1:4000
+#url: http://192.168.1.122:4000
 url: http://www.moilioncircle.com
 
 # Jekyll configuration
@@ -14,11 +16,15 @@ sass:
     sass_dir: _sass
     style: compressed
 permalink: /:categories/:title.html
-markdown: kramdown
+markdown: redcarpet
+#markdown: kramdown
 highlighter: pygments
+
 gems:
   - jekyll-sitemap
 
+redcarpet:
+  extensions: ["fenced_code_blocks","tables","autolink","strikethrough","no_intra_emphasis"]
 
 # Site owner
 owner:
