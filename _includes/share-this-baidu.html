@@ -5,8 +5,12 @@
     margin:0;
 }
 </style>
+<script src="{{ site.url }}/js/vendor/jquery.qrcode.min.js"></script>
 <div class="bdsharebuttonbox">
-<a href="#" class="bds_more" data-cmd="more"></a>
+<div id="mnqrcode" style="left:90px; top:-150px; z-index:1; position: absolute; display: none"></div>
+<img src="../images/code/32x32-qrcode.png" style="float: left; margin: 6px;" 
+onmouseover="$('#mnqrcode').css('display','block')"  onmouseout="$('#mnqrcode').css('display','none')" 
+>
 <a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a>
 <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
 <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
@@ -15,8 +19,10 @@
 <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
 <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
 <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
+<a href="#" class="bds_more" data-cmd="more"></a>
 </div>
-<script>
+
+<script type="text/javascript">
 var teaserinfo = document.getElementById("teaserinfo");
 window._bd_share_config={
     "common":{
@@ -32,4 +38,6 @@ window._bd_share_config={
     }
 };
 with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+$('#mnqrcode').qrcode("{{ site.url }}{{ page.url }}")
 </script>

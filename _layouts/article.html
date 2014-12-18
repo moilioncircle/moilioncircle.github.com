@@ -21,7 +21,8 @@ layout: default
 				{{ content }}
                 <br />
                 {% if page.teaser %}
-                <div><img id="teaserinfo" src="{{ site.url }}/images/{{ page.teaser }}" alt="《{{page.title}}》 {{page.excerpt}}" itemprop="image">
+                <div>
+                <img id="teaserinfo" src="{{ site.url }}/images/{{ page.teaser }}" alt="《{{page.title}}》 {{page.excerpt}}" itemprop="image">
                 {% if page.teaserinfo %}<div style="max-width:400px">题图：{{page.teaserinfo}}</div>{% endif %}
                 </div><br />
                 {% endif %}
@@ -44,7 +45,7 @@ layout: default
                 </div>
 				<hr />
 				<footer class="page-footer">
-					{% if page.categories %}{% include page-author.html %}{% endif %}
+					{% include page-author.html %}
 					{% include share-this-baidu.html %}
 					{% include page-meta.html %}
 				</footer><!-- /.footer -->
