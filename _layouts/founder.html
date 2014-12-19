@@ -42,11 +42,11 @@ layout: default
 				<hr />
 				<footer class="page-footer">
 					{% include page-author.html %}
-					{% include share-this-baidu.html %}
 					{% include page-meta.html %}
+                    {% include share-this-baidu.html %}
 				</footer><!-- /.footer -->
 				<aside>
-					{% if page.comments == true %}{% include comments.html %}{% endif %}
+					{% if page.comments == true %}{% include comments-duoshuo.html %}{% endif %}
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
