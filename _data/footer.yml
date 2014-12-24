@@ -3,14 +3,14 @@
 - title: 寻找狮友
   url: /archive/contact.html 
 
-- title: 项目源码
-  url: http://github.com/moilioncircle 
+#- title: 项目源码
+#  url: http://github.com/moilioncircle 
 
 - title: 狮友家族
   url: /archive/family.html
 
-#- title: 创业狮友
-#  url: /founder/
+- title: 创业狮友
+  url: /founder/
 
 - title: 内容归档
   url: /archive/category.html
