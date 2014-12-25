@@ -25,7 +25,8 @@ layout: default
 					{% include page-meta.html %}
 				</footer><!-- /.footer -->
 				<aside>
-					{% if page.comments == true %}{% include comments.html %}{% endif %}
+                    {% if page.share == true %}{% include share-this-baidu.html %}{% endif %}
+                    {% if page.comments == true %}{% include comments-duoshuo.html %}{% endif %}
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->

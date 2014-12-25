@@ -5,11 +5,13 @@ title: 创业狮友样本页面
 excerpt: 创业狮友样本页面，一个400x250的LOGO和一堆文字，就是全部了。
 tags: [创业, 样本, 狮友]
 teaser: logo/400x250-skill.png
+teaserinfo: 产品，文化，精神等logo
+modified: 
 
 toc: true
 comments: true
-share: false
-layout: founder
+share: true
+layout: article
 ---
 
 #创业狮友样本页面

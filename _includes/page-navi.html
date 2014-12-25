@@ -1,0 +1,17 @@
+<div style="margin:2rem 0 2rem 0">
+<a href="javascript:scroll(0,0)"  class="btn">回顶 ▲</a>
+{% assign cates = site.categories[page.category] %}
+{% assign cindx = cates.size|minus:1 %}
+{% for i in (0..cindx)%}
+    {% if cates[i].url == page.url %}
+        {% assign previdex = i|plus:1 %}
+        {% if previdex > cindx %}{% assign previdex = 0 %}{% endif %}
+        {% assign prevpost = cates[previdex] %}
+        <a href="{{ site.url }}{{ prevpost.url }}" class="btn-inverse">◄ {{prevpost.title}}</a>
+        {% assign nextidex = i|minus:1 %}
+        {% if nextidex < 0 %}{% assign previdex = cindx %}{% endif %}
+        {% assign nextpost = cates[nextidex] %}
+        <a href="{{ site.url }}{{ nextpost.url }}" class="btn-inverse">► {{nextpost.title}}</a>
+    {% endif %} 
+{% endfor %}
+</div>

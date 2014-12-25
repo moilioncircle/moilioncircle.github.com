@@ -10,7 +10,7 @@ modified:
 
 toc: true
 comments: true
-share: false
+share: true
 layout: article
 ---
 
