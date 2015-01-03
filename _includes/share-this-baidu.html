@@ -7,10 +7,9 @@
 </style>
 <script src="{{ site.url }}/js/vendor/jquery.qrcode.min.js"></script>
 <div class="bdsharebuttonbox">
-<div id="mnqrcode" style="left:90px; top:-150px; z-index:1; position: absolute; display: none"></div>
-<img src="../images/code/32x32-qrcode.png" style="float: left; margin: 6px;" 
-onmouseover="$('#mnqrcode').css('display','block')"  onmouseout="$('#mnqrcode').css('display','none')" 
->
+<div id="mnqrcode" style="cursor:pointer; z-index:9999; position: absolute; display: none;"   onclick="$('#mnqrcode').css('display','none')"></div>
+<img src="../images/code/32x32-qrcode.png" style="float: left; margin: 6px; cursor:pointer;" 
+onclick="$('#mnqrcode').css('display','block')">
 <a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a>
 <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
 <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
