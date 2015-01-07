@@ -6,8 +6,9 @@ permalink: /archive/tag.html
 
 <div class="tiles">
     <div>
+    {% assign cntlmt = 3 %}
     {% for tag in site.tags %} 
-        {% if tag[1].size > 1 %}
+        {% if tag[1].size > cntlmt %}
             <a href="#{{ tag[0] }}" class="btn-success"> {{ tag[0] }}▼{{ tag[1].size }}</a> 
         {% endif %}
     {% endfor %}
@@ -19,6 +20,7 @@ permalink: /archive/tag.html
         <a href="/archive/author.html" class="btn-inverse">作者◄</a>
     </div>
     {% for tag in site.tags %} 
+    {% if tag[1].size > cntlmt %}
     <div>
         <a name="{{ tag[0] }}" class="btn-success">{{ tag[0] }}</a>
         <a href="javascript:scroll(0,0)"  class="btn-inverse">回顶 ▲</a>
@@ -29,6 +31,7 @@ permalink: /archive/tag.html
             {% include post-list.html %}
         {% endfor %}
     </ol>
+    {% endif %}
     {% endfor %}
     
 </div>
