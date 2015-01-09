@@ -9,28 +9,28 @@ feature: bg/1200x600-road-bluesky.jpg
 
 <div class="tiles">
 
-{% assign counter = 1 %}
-{% assign limiter = 8 %}
-{% assign starlmt = limiter | divided_by:2 %}
-{% assign startag = '$' %}
 
-{% for post in site.tags[startag] %}
-    {% if counter > starlmt %} {% break %} {% endif %}
+{% assign lmtshow = 8 %}
+{% assign lmtstar = 4 %}
+{% assign tagstar = '$' %}
+{% assign catshow = 'publish,release,manshow,actions' %}
+
+{% assign cntstar = site.tags[tagstar] | size %} 
+{% if cntstar > lmtstar %}{% assign cntstar = lmtstar %}{% endif %}
+{% assign cntnorm = lmtshow  | minus: cntstar %} 
+
+{% assign counter = 1 %} 
+{% for post in site.posts %}
+    {% if counter > cntnorm %} {% break %} {% endif %}
+    {% if post.tags contains startag %} {% continue %} {% endif %}
+    {% unless catshow contains post.category %} {% continue %} {% endunless %}
     {% assign counter = counter | plus:1 %} 
 {% include post-arrow.html %}
 {% endfor %}
 
-{% if counter <= limiter %}
-    {% assign categories = 'publish,release,manshow,actions' %}
-    {% for post in site.posts %}
-        {% if counter > limiter %} {% break %} {% endif %}
-        {% if post.tags contains startag %} {% continue %} {% endif %}
-        {% unless categories contains post.category %} {% continue %} {% endunless %}
-        {% assign counter = counter | plus:1 %} 
+{% for post in site.tags[tagstar] limit: cntstar %}
 {% include post-arrow.html %}
-    {% endfor %}
-{% endif %}
-
+{% endfor %}
 </div>
 
 
