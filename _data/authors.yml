@@ -5,16 +5,24 @@ shi.rongjiu:
   web: http://www.trydofor.com
   bio: 十年摸爬滚打做了一信贷项目，略懂开发，运营和管理，祛你魅的大狮。
   avatar: user/shi.rongjiu.jpg
-  role: 创始人
+  role: 创始人(2014.05~∞)
   city: 大连
   join: 2014-05-14
 
 wang.shaochuan:
   name: 王少川
   web: http://www.zhefengle.com
-  bio: 淘宝无线专家，专注高并发，分布式及无线长连接、消息推送解决方案。
+  bio: 原淘宝无线专家，专注高并发，分布式及无线长连接、消息推送解决方案。
   avatar: user/wang.shaochuan.jpg
   role: 贡献者
   city: 杭州
   join: 2014-11-07
 
+wang.fuqiang:
+  name: 王福强
+  web: http://www.afoo.me/
+  bio: 《Spring揭秘》作者，６年信贷＆外汇期货，５年大数据＆实时计算。
+  avatar: user/wang.fuqiang.jpg
+  role: 贡献者
+  city: 杭州
+  join: 2015-01-13

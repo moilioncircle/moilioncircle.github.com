@@ -22,7 +22,7 @@ feature: bg/1200x600-road-bluesky.jpg
 {% assign counter = 1 %} 
 {% for post in site.posts %}
     {% if counter > cntnorm %} {% break %} {% endif %}
-    {% if post.tags contains startag %} {% continue %} {% endif %}
+    {% if post.tags contains tagstar %} {% continue %} {% endif %}
     {% unless catshow contains post.category %} {% continue %} {% endunless %}
     {% assign counter = counter | plus:1 %} 
 {% include post-arrow.html %}
