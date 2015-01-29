@@ -1,19 +1,22 @@
 # Footer navigation links
 
-- title: 发现狮友
+- title: 据点
   url: /archive/contact.html 
 
 #- title: 项目源码
 #  url: http://github.com/moilioncircle 
 
-- title: 狮友家族
+- title: 家谱
   url: /archive/family.html
 
 #- title: 创业狮友
 #  url: /founder/
 
-- title: 内容归档
+- title: 声明
+  url: /publish/024.rule.disclaimer-agreement.html
+
+- title: 归档
   url: /archive/category.html
 
-- title: 站内搜索
+- title: 搜索
   url: /archive/searchin.html

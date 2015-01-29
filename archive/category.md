@@ -6,7 +6,9 @@ permalink: /archive/category.html
 
 <div class="tiles">
     <div>
+    {% assign catshow = 'publish,release,manshow,actions' %}
     {% for cate in site.categories %} 
+        {% unless catshow contains cate[0] %} {% continue %} {% endunless %}
         {% assign name = cate[0] %}
         <a href="#{{ name }}" class="btn-info"> {{ site.data.category[name] }}▼{{ cate[1].size }}</a> 
     {% endfor %}
