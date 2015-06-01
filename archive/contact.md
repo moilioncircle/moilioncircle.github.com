@@ -17,7 +17,7 @@ function qrcode(img){
 </script>
 <ul class="th-grid">
   <li><a href="http://github.com/moilioncircle">
-  <img src="../images/logo/300x300-github.png" 
+  <img src="../images/logo/300x300-github.png"
   onmouseover="qrcode(this)" onmouseout="qrcode(this)">
   </a>官网及源码</li>
   <li><a href="http://i.youku.com/moilioncircle">
@@ -39,8 +39,8 @@ function qrcode(img){
   <img src="../images/logo/300x300-sinaweibo.png"
   onmouseover="qrcode(this)" onmouseout="qrcode(this)">
   </a>狮友互动（主）</li>
-  <li><a href="http://t.qq.com/moilioncircle">
-  <img src="../images/logo/300x300-tengxunweibo.png"
+  <li><a href="http://v.qq.com/vplus/a0b455ecd75466d6f9bb462829b154a5">
+  <img src="../images/logo/300x300-vqq.png"
   onmouseover="qrcode(this)" onmouseout="qrcode(this)">
-  </a>狮友互动（从）</li>
+  </a>视频发布（从）</li>
 </ul>
