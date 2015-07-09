@@ -26,3 +26,12 @@ wang.fuqiang:
   role: 贡献者
   city: 杭州
   join: 2015-01-13
+
+chen.baoyi:
+  name: 陈宝仪
+  web: https://github.com/leonchen83
+  bio: 5年信贷,9年程序员
+  avatar: user/chen.baoyi.jpg
+  role: 贡献者
+  city: 大连
+  join: 2015-07-09
