@@ -6,7 +6,7 @@ permalink: /archive/family.html
 ---
 
 <div class="tiles">
-{% for author in site.data.authors %}
+{% for author in site.data.authors reversed %}
     {% assign uid = author[0] %}
     {% assign uinfo = author[1] %}
     <a name="{{ uid }}" />
