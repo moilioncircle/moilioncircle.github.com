@@ -23,20 +23,20 @@ onclick="$('#mnqrcode').css('display','block')">
 
 <script type="text/javascript">
 var teaserinfo = document.getElementById("teaserinfo");
-window._bd_share_config={
-    "common":{
-        "bdSnsKey":{},
-        "bdText":teaserinfo.alt,
-        "bdPic":teaserinfo.src,
-        "bdMini":"3",
-        "bdMiniList":false,
-        "bdStyle":"0",
-        "bdSize":"32"
+var siteUrl = "{{ site.url }}{{ page.url }}"
+window._bd_share_config = {
+    common : {
+        bdText : "#攻城狮#"+teaserinfo.alt,
+        bdDesc : teaserinfo.alt,
+        bdUrl  : siteUrl, 
+        bdPic  : teaserinfo.src
     },
-    "share":{
-    }
-};
-with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    share : [{
+        "bdSize" : 32
+    }]
+}
 
-$('#mnqrcode').qrcode("{{ site.url }}{{ page.url }}")
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+
+$('#mnqrcode').qrcode(siteUrl)
 </script>
