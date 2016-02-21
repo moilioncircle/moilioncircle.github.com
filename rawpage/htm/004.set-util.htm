@@ -1,0 +1,145 @@
+<!-- saved from url=(0074)http://a9text.sourceforge.net/impl_javascript/tools/minitools/set-util.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css"></style><style>::selection {}</style></head><body><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="50%" height="30">
+    <input type="button" onclick="duplicateA()" value="R=Duplicate(A)" title="duplicated {A}"> 
+    <input type="button" onclick="distinctA()" value="R=Distinct(A)" title="distinct {A}"> 
+    <input type="button" onclick="remain()" value="R=A∩!B" title="{A} and not {B}"> 
+    <input type="button" onclick="bothin()" value="R=A∩B" title="{A} and {B}"> 
+    <input type="button" onclick="anyone()" value="R=A∪B" title="{A} or {B}"> 
+    <input type="button" onclick="swapAb()" value="A⇄B" title="swap {A} and {B}"> 
+    <td id="MESSAGE" title="one item per line">one item per line</td>
+</td>
+  </tr>
+  <tr>
+    <td width="50%">
+    <textarea name="textarea" placeholder="{A}" title="{A}" id="A_SET" style="width:100%; height:100%" ondblclick="this.select()"></textarea>    </td>
+    <td>
+    <textarea name="textarea" placeholder="{B}" title="{B}" id="B_SET" style="width:100%; height:100%" ondblclick="this.select()"></textarea>    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <textarea name="textarea" placeholder="{R}" title="{R}" id="R_SET" style="width:100%; height:100%" ondblclick="this.select()"></textarea>    </td>
+  </tr>
+</tbody></table>
+
+<script type="text/javascript">
+
+var aArr = {};
+var bArr = {};
+var aSet = {};
+var bSet = {};
+var rArr = [];
+
+var aObj = document.getElementById("A_SET");
+var bObj = document.getElementById("B_SET");
+var rObj = document.getElementById("R_SET");
+var mObj = document.getElementById("MESSAGE");
+
+function init()
+{
+    aArr = aObj.value.split(/[\r\n]+/g);
+    bArr = bObj.value.split(/[\r\n]+/g);
+    
+    aSet = {};
+    for(var i=0; i<aArr.length; i++)
+        if(aArr[i] != "")
+            aSet[aArr[i]] = true;
+
+    bSet = {};
+    for(var i=0; i<bArr.length; i++)
+        if(bArr[i] != "") 
+            bSet[bArr[i]] = true;
+
+    rArr = [];
+}
+
+function anyone()
+{
+    init();
+    
+    var mess = "{A}:"+aArr.length+" {B}:"+bArr.length;
+    
+    for(var key in aSet)
+        if(!bSet[key])
+            rArr.push(key);
+            
+    for(var key in bSet)
+            rArr.push(key);
+
+    rObj.value=rArr.join('\n');
+    mObj.innerHTML = mess+" {R}:"+rArr.length;
+
+}
+
+function bothin()
+{
+    init();
+
+    var mess = "{A}:"+aArr.length+" {B}:"+bArr.length;
+    for(var key in aSet)
+        if(bSet[key])
+            rArr.push(key);
+    
+    rObj.value=rArr.join('\n');
+    mObj.innerHTML = mess+" {R}:"+rArr.length;
+}
+
+function remain()
+{
+    init();
+
+    var mess = "{A}:"+aArr.length+" {B}:"+bArr.length;
+    for(var key in aSet)
+        if(!bSet[key])
+            rArr.push(key);
+    
+    rObj.value=rArr.join('\n');
+    mObj.innerHTML = mess+" {R}:"+rArr.length;
+}
+
+function duplicateA()
+{
+    init();
+
+    var mess = "{A}:"+aArr.length;
+    var tmpset = [];
+    var rset = {};
+    for(var i=0;i<aArr.length;i++)
+    {
+        if(tmpset[aArr[i]])
+            rset[aArr[i]] = true;
+        else
+            tmpset[aArr[i]]=aArr[i];
+    }
+    
+    for(var key in rset)
+        rArr.push(key);
+    
+    rObj.value=rArr.join('\n');
+    mObj.innerHTML = mess+" {R}:"+rArr.length;
+}
+
+function distinctA()
+{
+    init();
+
+    var mess = "{A}:"+aArr.length;
+    for(var key in aSet)
+        rArr.push(key);
+    
+    rObj.value=rArr.join('\n');
+    mObj.innerHTML = mess+" {R}:"+rArr.length;
+
+}
+
+function swapAb()
+{
+    var temp = aObj.value;
+    aObj.value = bObj.value;
+    bObj.value = temp;
+}
+
+</script>
+</body></html>
