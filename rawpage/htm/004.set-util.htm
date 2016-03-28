@@ -1,6 +1,6 @@
-<!-- saved from url=(0074)http://a9text.sourceforge.net/impl_javascript/tools/minitools/set-util.htm -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style type="text/css"></style><style>::selection {}</style></head><body><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<!-- saved from http://a9text.sourceforge.net/impl_javascript/tools/minitools/set-util.htm -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
   <tbody><tr>
     <td width="50%" height="30">
     <input type="button" onclick="duplicateA()" value="R=Duplicate(A)" title="duplicated {A}"> 
@@ -9,8 +9,11 @@
     <input type="button" onclick="bothin()" value="R=A∩B" title="{A} and {B}"> 
     <input type="button" onclick="anyone()" value="R=A∪B" title="{A} or {B}"> 
     <input type="button" onclick="swapAb()" value="A⇄B" title="swap {A} and {B}"> 
-    <td id="MESSAGE" title="one item per line">one item per line</td>
-</td>
+    </td>
+    <td>
+    <input id="SPLITER" placeholder="[\s]+" type="text" value="[\s]+" style="width:100">
+    <span id="MESSAGE" title="one item per line">one item per line</span>
+    </td>
   </tr>
   <tr>
     <td width="50%">
@@ -35,12 +38,15 @@ var rArr = [];
 var aObj = document.getElementById("A_SET");
 var bObj = document.getElementById("B_SET");
 var rObj = document.getElementById("R_SET");
+var tObj = document.getElementById("SPLITER");
 var mObj = document.getElementById("MESSAGE");
 
 function init()
 {
-    aArr = aObj.value.split(/[\r\n]+/g);
-    bArr = bObj.value.split(/[\r\n]+/g);
+    var sreg = tObj.value == '' ? /[\s]+/g : RegExp(tObj.value, 'g');
+
+    aArr = aObj.value.split(sreg);
+    bArr = bObj.value.split(sreg);
     
     aSet = {};
     for(var i=0; i<aArr.length; i++)
@@ -142,4 +148,3 @@ function swapAb()
 }
 
 </script>
-</body></html>
