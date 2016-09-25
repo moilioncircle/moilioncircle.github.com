@@ -15,7 +15,7 @@ permalink: /archive/year.html
             {% assign npost = site.posts[forloop.index] %}
             {% assign nyear = npost.date | date: '%Y' %}
         {% endif %}
-        {% if nyear != year) or forloop.last %}
+        {% if nyear != year or forloop.last %}
             <a href="#{{ year }}" class="btn-info"> {{ year }}▼{{ yearcnt }}</a>
             {% assign yearcnt = 0 %} 
         {% endif %}
