@@ -6,7 +6,7 @@ permalink: /archive/category.html
 
 <div class="tiles">
     <div>
-    {% assign catshow = 'publish,release,manshow,actions' %}
+    {% assign catshow = 'starsea,release,publish,manshow,actions' %}
     {% for cate in site.categories %} 
         {% unless catshow contains cate[0] %} {% continue %} {% endunless %}
         {% assign name = cate[0] %}
