@@ -6,7 +6,9 @@ permalink: /warroom/index.html
 ---
 
 <div class="tiles">
-{% for post in site.categories.warroom %}
-  {% include post-grid.html %}
+{% assign catshow = 'actions,manshow' %}
+{% for post in site.posts %}
+    {% unless catshow contains post.category %} {% continue %} {% endunless %}
+    {% include post-grid.html %}
 {% endfor %}
 </div>

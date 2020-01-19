@@ -1,21 +1,25 @@
 # Site navigation links
 
-- title: 爬步历史
-  url: /publish/
-  excerpt: 爬步历史（publish），努力地记录每次爬步。
+- title: 星辰大海
+  url: /starsea/
+  excerpt: 星辰大海，个人提升31.4%；团队提升27.1%
 
 - title: 锐力易思
   url: /release/
-  excerpt: 锐力易思（release），锐力地促进思想进化。
+  excerpt: 锐力易思（release），锐力地促进思想进化
 
-#- title: 瓦奧如沐
-#  url: /warroom/
-#  excerpt: 瓦奧如沐（warroom），不等不靠，有囧有料。
+- title: 爬步历史
+  url: /publish/
+  excerpt: 爬步历史（publish），努力地记录每次爬步
 
-- title: 闷骚闷秀
-  url: /manshow/
-  excerpt: 闷骚闷秀（manshow），码农装呆，程序猿卖萌，攻城狮闷骚。
+- title: 哇奥如沐
+  url: /warroom/
+  excerpt: 瓦奧如沐（warroom），不等不靠，有囧有料
 
-- title: 爱可深思
-  url: /actions/
-  excerpt: 爱可深思（actions），人是逼出来的，万物生长靠日。
+# - title: 闷骚闷秀
+#   url: /manshow/
+#   excerpt: 闷骚闷秀（manshow），码农装呆，程序猿卖萌，攻城狮闷骚
+
+# - title: 爱可深思
+#   url: /actions/
+#   excerpt: 爱可深思（actions），人是逼出来的，万物生长靠日

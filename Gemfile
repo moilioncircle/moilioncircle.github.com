@@ -1,9 +1,11 @@
 # Skinny Bones Gemfile
+# time freezing at 2017
+
 source "https://rubygems.org"
 
-gem "jekyll"
-gem "jekyll-sitemap"
-gem "sass"
-gem "bourbon"
-gem "neat"
-gem 'octopress', '~> 3.0.0.rc.12'
+gem "jekyll", '3.5.2'
+gem "jekyll-sitemap", "1.2.0"
+gem "sass", "3.5.4"
+gem "bourbon", "4.3.4"
+gem "neat", "2.1.0"
+gem 'octopress', '~> 3.0.0'
