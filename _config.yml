@@ -10,7 +10,7 @@ teaser: logo/400x250-skill.png
 url: http://www.moilioncircle.com
 
 # Jekyll configuration
-
+timezone : Asia/Shanghai
 sass:
     sass_dir: _sass
     style: compressed
