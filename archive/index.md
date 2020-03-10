@@ -9,16 +9,18 @@ feature: bg/1200x600-road-bluesky.jpg
 
 <div class="tiles">
 <!--  -->
-{% comment %}
 {% assign lmtshow = 12 %}
 {% assign lmtstar = 4 %}
 {% assign tagstar = '$' %}
 {% assign catshow = 'starsea,release,publish,actions,manshow' %}
 
+{% comment %}
 {% assign cntstar = site.tags[tagstar] | size %} 
 {% if cntstar > lmtstar %}{% assign cntstar = lmtstar %}{% endif %}
 {% assign cntnorm = lmtshow  | minus: cntstar %} 
+{% endcomment %}
 
+{% assign cntnorm = lmtshow %} 
 {% assign counter = 1 %} 
 {% for post in site.posts %}
   {% if counter > cntnorm %} {% break %} {% endif %}
@@ -28,10 +30,11 @@ feature: bg/1200x600-road-bluesky.jpg
   {% include post-arrow.html %}
 {% endfor %}
 
+{% comment %}
 {% for post in site.tags[tagstar] limit: cntstar %}
   {% include post-arrow.html %}
 {% endfor %}
-{% endcomment %}
+
 <!--  -->
 {% assign cate_show = 'starsea:4, release:4, actions:2, manshow:1, publish:1' | split: ',' %}
 {% for catlmt in cate_show %}
@@ -44,7 +47,7 @@ feature: bg/1200x600-road-bluesky.jpg
     {% include post-arrow.html %}
   {% endfor %}
 {% endfor %}
-
+{% endcomment %}
 </div>
 
 
