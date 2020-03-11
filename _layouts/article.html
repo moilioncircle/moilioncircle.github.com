@@ -31,8 +31,10 @@ layout: default
 				</footer><!-- /.footer -->
 				<aside>
                     {% include page-navi.html %}
+                    {% comment %}
                     {% if page.share == true %}{% include share-this-baidu.html %}{% endif %}
                     {% if page.comments == true %}{% include comments-duoshuo.html %}{% endif %}
+                    {% endcomment %}
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
