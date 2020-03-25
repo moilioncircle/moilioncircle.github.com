@@ -1,0 +1,53 @@
+{
+    "success": true,
+    "message": "ok",
+    "code": "200",
+    "data": {
+        "resHost": "https://gitee.com/trydofor/moilioncircle.github.com/raw/master/",
+        "menuItem": [
+            {
+                "id": "1101",
+                "imgIcon": "images/post/actions/a021/m1.png",
+                "name": "早餐"
+            },
+            {
+                "id": "1102",
+                "imgIcon": "images/post/actions/a021/m2.png",
+                "name": "精选套餐"
+            },
+            {
+                "id": "1103",
+                "imgIcon": "images/post/actions/a021/m3.png",
+                "name": "脆饼卷"
+            }
+        ],
+        "listItem": [ 
+            {
+                "id": "2101",
+                "menuId": "1101",
+                "imgMini": "images/post/actions/a021/s1.png",
+                "name": "超人卷饼早餐",
+                "isTop": true
+            },
+            {
+                "id": "2102",
+                "menuId": "1102",
+                "imgMini": "images/post/actions/a021/s2.png",
+                "name": "拿破仑鸭肉套餐",
+                "isTop": true
+            },
+            {
+                "id": "2103",
+                "menuId": "1102",
+                "imgMini": "images/post/actions/a021/s3.png",
+                "name": "虾仁水饺套餐"
+            },
+            {
+                "id": "2104",
+                "menuId": "1103",
+                "imgMini": "images/post/actions/a021/s4.png",
+                "name": "虾仁水饺套餐"
+            }
+        ]
+    }
+}
