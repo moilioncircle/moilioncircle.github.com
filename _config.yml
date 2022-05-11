@@ -7,7 +7,7 @@ description: 不等不靠，有囧有料，攻城狮建造世界
 logo: logo/120x120-moilion.png
 teaser: logo/400x250-skill.png
 # url: http://0.0.0.0:4000
-url: http://www.moilioncircle.com
+url: https://www.moilioncircle.com
 
 # Jekyll configuration
 timezone : Asia/Shanghai
@@ -33,7 +33,7 @@ redcarpet:
 # Site owner
 owner:
   name: "史荣久"
-  web: http://www.trydofor.com
+  web: https://www.trydofor.com
   bio: "$implicity is everything, since valentine's day 2004."
   avatar: user/shi.rongjiu.jpg
 
